@@ -1,3 +1,7 @@
+# Time: O(n)
+# Space: O(1)
+# Implements voting algorithm, think about KNN
+# Submission Link: 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         majority_elem, count = nums[0], 1
