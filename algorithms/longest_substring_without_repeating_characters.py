@@ -27,7 +27,6 @@ class Solution:
         left, right = 0, 0
         numSet = set()
         while right < size:
-            window = s[left : right + 1]
             if s[right] not in numSet:
                 numSet.add(s[right])
                 right += 1
