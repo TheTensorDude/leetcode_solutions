@@ -35,3 +35,20 @@ class Solution:
                 left += 1
             out = max(right - left, out)
         return out
+
+# Another approach    
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        uniques = set()
+        res = 0
+        left, right = 0, 0
+        size = len(s)
+        while right < size:
+            if s[right] in uniques:
+                uniques.remove(s[left])
+                left += 1
+            else:
+                uniques.add(s[right])
+                right += 1
+                res = max(res, right - left)
+        return res
